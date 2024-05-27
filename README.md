@@ -11,6 +11,7 @@ Automation Assignment for Excel Technologies Ltd.
 7. Then put the data into an array.
 8. Then give input data from the array to the Patient Information required field and click submit.
 9. I used proper comments in the code of every phase as well as gave print in every phase.
+
 ***Step to Run project download from github:
 1. First go to the github link, then click the Code option from the right side of the repository and then click Download Zip.
 2. After the download is completed , extract the download file here.
