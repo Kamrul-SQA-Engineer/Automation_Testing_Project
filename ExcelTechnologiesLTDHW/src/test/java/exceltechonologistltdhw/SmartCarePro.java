@@ -20,7 +20,7 @@ import java.util.List;
 public class SmartCarePro {
   @Test
   public void TestHomeWork() {
-	  //Browser setup.
+	//Browser setup, put URL in the browser and windows maximize.
 		ChromeOptions chromeOptions = new ChromeOptions();
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(chromeOptions);
@@ -28,13 +28,13 @@ public class SmartCarePro {
 		driver.manage().window().maximize();
 
 		try {
-			Thread.sleep(15000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//Login to the Website.
-		System.out.println("Login started");
+		//Login into the SmartCarePRO Website.
+		System.out.println("Login Started");
 		WebElement Username = driver.findElement(By.name("username"));
 		Username.sendKeys("tester");
 		WebElement Password = driver.findElement(By.name("password"));
@@ -49,6 +49,7 @@ public class SmartCarePro {
 			e.printStackTrace();
 		}
 		//Select Province
+		System.out.println("After Login Search the Facility");
 		Select drpProvince = new Select(driver.findElement(By.xpath("(//div[contains(@class,'flex flex-col')]//select)[1]")));
 		drpProvince.selectByVisibleText("Lusaka");
 
@@ -83,7 +84,7 @@ public class SmartCarePro {
 
 		driver.findElement(By.xpath("//div[text()='Dr. Watson Dental Clinic']")).click();
 
-		System.out.println("Facility search completed");
+		System.out.println("Facility Search Completed");
 
 		try {
 			Thread.sleep(10000);
@@ -92,7 +93,7 @@ public class SmartCarePro {
 			e.printStackTrace();
 		}
 		// Start add new patient
-		System.out.println("Add new patient process start");
+		System.out.println("Add new patient process start.");
 		driver.findElement(By.xpath("//div[@class='mt-5 2xl:mt-8']//button[1]")).click();
 
 		try {
@@ -102,7 +103,7 @@ public class SmartCarePro {
 			e.printStackTrace();
 		}
 
-		System.out.println("Click NRC Button");
+		System.out.println("Click the NRC Button");
 		driver.findElement(By.xpath("//button[normalize-space()='NRC']")).click();
 		
 		try {
@@ -111,7 +112,8 @@ public class SmartCarePro {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
+		System.out.println("Set the NRC number 111111111");
 		WebElement enterNRC = driver.findElement(By.xpath("//div[contains(@class,'flex flex-col')]//input[1]"));
 		enterNRC.sendKeys("111111111");
 		
@@ -122,7 +124,7 @@ public class SmartCarePro {
 			e.printStackTrace();
 		}
 
-		System.out.println("Next Step to search");
+		System.out.println("Next Step to Click Search Button");
 		driver.findElement(By.xpath("//button[text()='Search']")).click();
 
 		try {
@@ -131,7 +133,7 @@ public class SmartCarePro {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		System.out.println("Click to add patient");
+		System.out.println("Click to Add Patient");
 		driver.findElement(By.xpath("//button[text()='Attend to Patient']")).click();
 
 		try {
@@ -148,7 +150,7 @@ public class SmartCarePro {
 		//driver.findElement(By.xpath("//button[@class='main_btn false']//span[1]")).click();
 		
 		
-		//Click Vital
+		//Click Vital for next step
 		System.out.println("Click the Vital");
 		driver.findElement(By.xpath("//p[text()='Vital']")).click();
 
@@ -220,6 +222,7 @@ public class SmartCarePro {
 			WebElement submitButton = driver.findElement(By.xpath("//button[@type='submit']//span[1]"));
 			submitButton.click();
 			System.out.println("Data submission completed and thank you");
+			System.out.println("Assignment Completed");
 			csvParser.close();
 
 		} catch (IllegalArgumentException e) {
