@@ -37,15 +37,5 @@
 			<artifactId>commons-csv</artifactId>
 			<version>1.8</version>
 		</dependency>
-		<dependency>
-			<groupId>DemoProject</groupId>
-			<artifactId>ProjectDemo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>TestCode</groupId>
-			<artifactId>BrainCompany</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 </project>
