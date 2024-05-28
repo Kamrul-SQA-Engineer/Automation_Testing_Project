@@ -142,14 +142,30 @@ public class SmartCarePro {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+	  //If biometric part arrived
+		System.out.println("Fingure print skip");
+		driver.findElement(By.xpath("//div[contains(@class,'flex justify-center')]//button[1]")).click();
+		driver.findElement(By.xpath("(//div[@class='flex items-center']//span)[1]")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath("(//div[contains(@class,'flex justify-center')]//button)[2]")).click();
 		
-		//If biometric part arrived
-		//System.out.println("Fingure print skip");
-		//driver.findElement(By.xpath("//div[contains(@class,'flex justify-center')]//button[1]")).click();
-		//driver.findElement(By.xpath("(//div[@class='flex items-center']//span)[1]")).click();
-		//driver.findElement(By.xpath("//button[@class='main_btn false']//span[1]")).click();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
+
+
+	  
 		//Click Vital for next step
 		System.out.println("Click the Vital");
 		driver.findElement(By.xpath("//p[text()='Vital']")).click();
