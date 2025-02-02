@@ -1,4 +1,3 @@
-# Excel-Technologies-Ltd
 Automation Assignment for Excel Technologies Ltd.
 
 ***Steps Of Coding of Test:
